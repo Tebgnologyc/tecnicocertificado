@@ -1,53 +1,171 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Técnico Certificado Elveher Balanta. Electricidad, cámaras de seguridad y redes.">
-<title>Técnico Certificado | Elveher Balanta</title>
-<style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f4f6f8;color:#17202a}
-header{background:#111827;color:#fff;text-align:center;padding:30px 20px 55px}.logo{display:block;width:min(100%,760px);max-height:300px;object-fit:contain;margin:0 auto 20px;border-radius:14px}
-header h1{margin:0 0 10px;font-size:38px}header p{margin:7px;font-size:20px}
-.badge{display:inline-block;margin-top:18px;padding:10px 18px;border:1px solid #60a5fa;border-radius:25px;color:#bfdbfe}
-main{max-width:1000px;margin:auto;padding:35px 20px}h2{text-align:center;font-size:30px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.card{background:#fff;border-radius:16px;padding:25px;text-align:center;box-shadow:0 5px 18px #0001}.icon{font-size:42px}
-.contact{margin-top:35px;background:#111827;color:#fff;border-radius:18px;padding:30px;text-align:center}
-.buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:20px}
-.btn{display:inline-block;padding:14px 22px;border-radius:10px;text-decoration:none;font-weight:bold}
-.whatsapp{background:#22c55e;color:#fff}.mail{background:#2563eb;color:#fff}
-footer{text-align:center;padding:25px;color:#667085;font-size:14px}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Elveher Balanta - Técnico Certificado. Electricidad, cámaras de seguridad y redes.">
+  <meta name="theme-color" content="#061a3a">
+  <title>Elveher Balanta | Técnico Certificado</title>
+  <style>
+    :root{
+      --navy:#061a3a; --blue:#0b4ea2; --blue2:#0876d1;
+      --yellow:#ffd400; --green:#12c94b; --white:#fff;
+      --text:#10213d; --muted:#64748b; --light:#f5f8fc;
+      --shadow:0 18px 45px rgba(3,18,42,.14);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:var(--light)}
+    a{text-decoration:none;color:inherit}
+    .nav{position:sticky;top:0;z-index:20;background:rgba(3,18,42,.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.12)}
+    .nav-inner{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:8px 20px}
+    .brand img{width:170px;max-height:62px;object-fit:contain}
+    .menu{display:flex;gap:28px;color:#fff;font-weight:700;font-size:15px;align-items:center}
+    .menu a{padding:12px 0;border-bottom:3px solid transparent}
+    .menu a:hover{border-color:var(--yellow)}
+    .wa-top{background:var(--green);color:#fff;padding:13px 20px;border-radius:14px;font-weight:800}
+    .hero{position:relative;overflow:hidden;min-height:620px;background:linear-gradient(115deg,#031735 0%,#06377b 55%,#041a3b 100%);color:#fff}
+    .hero:before{content:"";position:absolute;inset:-8%;background-image:linear-gradient(rgba(3,23,53,.72),rgba(3,23,53,.72)),url("logo.png");background-repeat:no-repeat;background-position:center right;background-size:min(900px,72vw) auto;opacity:.28;filter:saturate(1.1);pointer-events:none}
+    .hero:after{content:"";position:absolute;width:420px;height:420px;right:-180px;bottom:-220px;background:radial-gradient(circle,rgba(255,212,0,.45),transparent 65%);pointer-events:none}
+    .hero-inner{position:relative;z-index:2;max-width:1180px;margin:auto;padding:82px 20px 78px;display:grid;grid-template-columns:1.05fr .95fr;gap:35px;align-items:center}
+    .tag{display:inline-block;background:var(--yellow);color:#111827;font-weight:900;padding:9px 18px;border-radius:20px;text-transform:uppercase;letter-spacing:.5px}
+    h1{font-size:clamp(48px,6vw,78px);line-height:.95;margin:18px 0 8px;letter-spacing:-2px}
+    .name{font-size:clamp(36px,5vw,62px);font-weight:900;color:var(--yellow);font-style:italic;line-height:1.05}
+    .hero p{font-size:20px;line-height:1.45;max-width:650px;color:#e8f1ff}
+    .slogan{margin:25px 0;font-size:22px;font-weight:900;font-style:italic;border-left:5px solid var(--yellow);padding-left:16px}
+    .buttons{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:15px 23px;border-radius:14px;font-weight:900;border:2px solid transparent}
+    .btn-wa{background:var(--green);color:#fff}.btn-mail{border-color:#fff;color:#fff;background:transparent}
+    .hero-logo{display:flex;justify-content:center}
+    .hero-logo img{width:min(520px,90%);filter:drop-shadow(0 25px 35px rgba(0,0,0,.35));opacity:.96}
+    section{scroll-margin-top:85px}
+    .section{max-width:1180px;margin:auto;padding:70px 20px}
+    .section-head{text-align:center;margin-bottom:38px}
+    .eyebrow{color:#0876d1;font-weight:900;text-transform:uppercase;letter-spacing:1px}
+    h2{font-size:clamp(32px,4vw,48px);margin:8px 0;color:#0a1e3d}
+    .section-head p{color:var(--muted);font-size:18px}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card{background:#fff;border-radius:22px;overflow:hidden;box-shadow:var(--shadow);border:1px solid #e5edf7}
+    .card-top{height:125px;background:linear-gradient(135deg,#06265a,#0876d1);display:flex;align-items:center;padding:25px;color:#fff}
+    .icon{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:var(--yellow);color:#111;font-size:31px;margin-right:15px}
+    .card h3{font-size:25px;margin:0}
+    .card-body{padding:22px}
+    .card-body p{color:#52637a;line-height:1.55;margin:0}
+    .trust{background:#031735;color:#fff}
+    .trust h2{color:#fff}
+    .trust-grid{max-width:1180px;margin:auto;padding:65px 20px 45px;display:grid;grid-template-columns:repeat(4,1fr);gap:15px;text-align:center}
+    .trust-item{padding:18px 12px}
+    .trust-icon{font-size:42px;color:var(--yellow)}
+    .trust-item h3{font-size:20px;margin:12px 0 8px}.trust-item p{color:#d7e4f6;line-height:1.45}
+    .conte{max-width:950px;margin:10px auto 60px;padding:22px 28px;border:1px solid #2d8cff;border-radius:18px;display:flex;align-items:center;gap:22px;background:rgba(255,255,255,.03)}
+    .conte-badge{font-size:45px;color:var(--yellow)}
+    .conte strong{color:var(--yellow);font-size:22px}.conte span{display:block;color:#e6eef9;margin-top:5px}
+    .contact{background:linear-gradient(135deg,#06245a,#071a38);color:#fff;text-align:center}
+    .contact h2{color:#fff}
+    .contact p{font-size:18px;color:#dce8f8}
+    .contact-buttons{justify-content:center}
+    .footer{background:#020e21;color:#dbe7f5;padding:22px 20px}
+    .footer-inner{max-width:1180px;margin:auto;display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+    .footer-slogan{color:var(--yellow);font-weight:800}
+    .mobile-menu{display:none;color:#fff;font-size:28px}
+    @media(max-width:850px){
+      .menu{display:none}.mobile-menu{display:block}.wa-top{display:none}
+      .hero-inner{grid-template-columns:1fr;padding-top:58px;text-align:left}
+      .hero-logo{order:-1;justify-content:flex-start}.hero-logo img{width:300px}
+      .hero:before{background-position:center;background-size:700px auto;opacity:.18}
+      .services{grid-template-columns:1fr}
+      .trust-grid{grid-template-columns:1fr 1fr}
+      .conte{margin-left:20px;margin-right:20px}
+    }
+    @media(max-width:520px){
+      .brand img{width:145px}.hero-inner{padding-left:18px;padding-right:18px}
+      h1{font-size:46px}.name{font-size:38px}.hero p{font-size:18px}.slogan{font-size:19px}
+      .hero-logo img{width:260px}
+      .section{padding:52px 18px}.trust-grid{grid-template-columns:1fr}
+      .conte{flex-direction:column;text-align:center;padding:24px 18px}
+      .btn{width:100%}.footer-inner{justify-content:center;text-align:center}
+    }
+  </style>
 </head>
 <body>
-<header>
-<img class="logo" src="logo.png" alt="Logo Técnico Certificado Elveher Balanta">
-<h1>Técnico Certificado</h1>
-<p><strong>Elveher Balanta</strong></p>
-<p>Electricidad • Cámaras • Redes</p>
-<span class="badge">Servicio técnico profesional</span>
-</header>
-<main>
-<section>
-<h2>Servicios</h2>
-<div class="cards">
-<div class="card"><div class="icon">⚡</div><h3>Electricidad</h3><p>Instalación, mantenimiento y solución de problemas eléctricos.</p></div>
-<div class="card"><div class="icon">📹</div><h3>Cámaras de seguridad</h3><p>Instalación, configuración y mantenimiento de sistemas CCTV.</p></div>
-<div class="card"><div class="icon">🌐</div><h3>Redes</h3><p>Instalación, configuración y mantenimiento de redes de datos.</p></div>
-</div>
-</section>
-<section class="contact">
-<h2>Contáctame</h2>
-<p>Solicita información o una cotización.</p>
-<div class="buttons">
-<a class="btn whatsapp" href="https://wa.me/573028418261" target="_blank">WhatsApp 302 841 8261</a>
-<a class="btn whatsapp" href="https://wa.me/573196989919" target="_blank">WhatsApp 319 698 9919</a>
-<a class="btn mail" href="mailto:tebgnologyc@gmail.com">Enviar correo</a>
-</div>
-<p>tebgnologyc@gmail.com</p>
-</section>
-</main>
-<footer>© 2026 Elveher Balanta — Técnico Certificado</footer>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#inicio"><img src="logo.png" alt="Elveher Balanta - Técnico Certificado"></a>
+      <nav class="menu" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a><a href="#servicios">Servicios</a><a href="#confianza">Por qué confiar</a><a href="#contacto">Contacto</a>
+      </nav>
+      <a class="wa-top" href="https://wa.me/573028418261" target="_blank" rel="noopener">WhatsApp</a>
+      <span class="mobile-menu">☰</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-inner">
+        <div>
+          <span class="tag">Bienvenido</span>
+          <h1>Técnico<br>Certificado</h1>
+          <div class="name">Elveher Balanta</div>
+          <p>Soluciones eléctricas, de cámaras y redes, con calidad, seguridad y confianza para tu hogar, negocio o empresa.</p>
+          <div class="slogan">⚡ “Energía segura, espacios protegidos”</div>
+          <div class="buttons">
+            <a class="btn btn-wa" href="https://wa.me/573028418261" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn btn-mail" href="mailto:tebgnologyc@gmail.com">✉ Enviar correo</a>
+          </div>
+        </div>
+        <div class="hero-logo"><img src="logo.png" alt="Logo Elveher Balanta"></div>
+      </div>
+    </section>
+
+    <section class="section" id="servicios">
+      <div class="section-head">
+        <div class="eyebrow">Mis servicios</div>
+        <h2>Soluciones que te conectan</h2>
+        <p>Trabajo profesional para que todo funcione como debe ser.</p>
+      </div>
+      <div class="services">
+        <article class="card"><div class="card-top"><div class="icon">⚡</div><h3>Electricidad</h3></div><div class="card-body"><p>Instalaciones, tableros y protecciones, diagnóstico, mantenimiento e iluminación interior y exterior.</p></div></article>
+        <article class="card"><div class="card-top"><div class="icon">📹</div><h3>Cámaras de seguridad</h3></div><div class="card-body"><p>Instalación y configuración, monitoreo remoto, sistemas IP y análogos, soporte y mantenimiento.</p></div></article>
+        <article class="card"><div class="card-top"><div class="icon">🌐</div><h3>Redes</h3></div><div class="card-body"><p>Cableado estructurado, configuración de routers, redes WiFi y cableadas y optimización de señal.</p></div></article>
+      </div>
+    </section>
+
+    <section class="trust" id="confianza">
+      <div class="section-head" style="padding:65px 20px 10px;margin:0 auto;max-width:1180px">
+        <div class="eyebrow" style="color:#ffd400">Seguridad y confianza</div>
+        <h2>¿Por qué confiar?</h2>
+      </div>
+      <div class="trust-grid">
+        <div class="trust-item"><div class="trust-icon">🛡️</div><h3>Trabajo seguro</h3><p>Aplicación de buenas prácticas y enfoque en la seguridad.</p></div>
+        <div class="trust-item"><div class="trust-icon">★</div><h3>Calidad</h3><p>Soluciones cuidadas y orientadas a resultados duraderos.</p></div>
+        <div class="trust-item"><div class="trust-icon">⏱</div><h3>Atención puntual</h3><p>Tu tiempo también es importante.</p></div>
+        <div class="trust-item"><div class="trust-icon">🤝</div><h3>Compromiso real</h3><p>Tu proyecto recibe atención profesional y responsable.</p></div>
+      </div>
+      <div class="conte"><div class="conte-badge">🏅</div><div><strong>Técnico Certificado</strong><span>Cuento con certificación CONTE, como respaldo de mi preparación profesional.</span></div></div>
+    </section>
+
+    <section class="contact" id="contacto">
+      <div class="section">
+        <div class="section-head">
+          <div class="eyebrow" style="color:#ffd400">Hablemos de tu proyecto</div>
+          <h2>¿Listo para empezar?</h2>
+          <p>Escríbeme y conversemos sobre la solución que necesitas.</p>
+        </div>
+        <div class="buttons contact-buttons">
+          <a class="btn btn-wa" href="https://wa.me/573028418261" target="_blank" rel="noopener">WhatsApp 302 841 8261</a>
+          <a class="btn btn-wa" href="https://wa.me/573196989919" target="_blank" rel="noopener">WhatsApp 319 698 9919</a>
+          <a class="btn btn-mail" href="mailto:tebgnologyc@gmail.com">✉ tebgnologyc@gmail.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>📍 Colombia</div>
+      <div><strong>Técnico Certificado – Elveher Balanta</strong></div>
+      <div class="footer-slogan">⚡ “Energía segura, espacios protegidos” ⚡</div>
+    </div>
+  </footer>
 </body>
 </html>
